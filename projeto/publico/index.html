@@ -33,19 +33,67 @@
             <label for="desc">Descrição</label>
 
             <p>Preço:</p>
-            <label for="min">Min.</label>
-            <input type="number" name="min" id="min">
-            <label for="max">Max.</label>
-            <input type="number" name="max" id="max">
+            <label for="min">Min. R$</label>
+            <input type="number" name="min" id="min" placeholder="0">
+            <label for="max">Max. R$</label>
+            <input type="number" name="max" id="max" placeholder="1000000">
 
             <p>Categoria:</p>
-            <input type="checkbox" name="checkAll" id="checkAll">
+            <input type="checkbox" name="checkAll" id="checkAll" value="checkAll">
             <label for="checkAll">Todos</label>
-            <input type="checkbox" name="eletro" id="eletro">
+            <input type="checkbox" name="eletro" id="eletro" value="eletro">
             <label for="eletro">Eletrônicos</label>
-            <input type="checkbox" name="moveis" id="moveis">
+            <input type="checkbox" name="moveis" id="moveis" value="moveis">
             <label for="moveis">Móveis</label>
+            <input type="checkbox" name="roupas" id="roupas" value="roupas">
+            <label for="roupas">Roupas</label>
         </fieldset>
+
+        <div class="card" id="card1">
+            <img src="produto.png" alt="produto">
+            <p>Nome do produto</p>
+            <p>Preço</p>
+            <p>Breve descrição</p>
+        </div>
+
+        <script>
+            let checkAll = document.querySelector("#checkAll");
+            let categorias = [];
+            let flag = 0;
+            categorias.push(document.querySelector("#eletro"));
+            categorias.push(document.querySelector("#moveis"));
+            categorias.push(document.querySelector("#roupas"));
+            checkAll.addEventListener("click", function() {
+                if(checkAll.checked){
+                    for(let item of categorias)
+                        item.checked = true;
+                    flag = categorias.length;
+                }
+                else{
+                    for(let item of categorias)
+                        item.checked = false;
+                    flag = 0;
+                }
+            })
+            for(let item of categorias){
+                item.addEventListener("click", function() {
+                    if(item.checked)
+                        flag++;
+                    else
+                        flag--;
+                    if(flag === categorias.length)
+                        checkAll.checked = true;
+                    else
+                        checkAll.checked = false;
+                })
+            }
+            let card1 = document.querySelector("#card1");
+            card1.addEventListener("click", function() {
+                window.open("anuncio","_self");
+            })
+            
+            
+        </script>
 
     </main>
     <footer>
