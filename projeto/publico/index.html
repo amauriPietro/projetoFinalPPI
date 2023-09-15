@@ -57,70 +57,72 @@
             <label for="roupas">Roupas</label>
         </fieldset>
 
-        <div class="card" id="card1">
-            <div class = "productInfos">
-                <p>Nome do produto</p>
-                <p>Preço</p>
-                <p>Breve descrição</p>
+        <div class="resultsContainer">
+            <div class="card" id="card1">
+                <div class = "productInfos">
+                    <p>Nome do produto</p>
+                    <p>Preço</p>
+                    <p>Breve descrição</p>
+                </div>
+                <div>
+                    <img src="/projeto/publico/img/default_img.jpeg" height= 100 alt="produto">
+                </div>
             </div>
-            <div>
-                <img src="/projeto/publico/img/default_img.jpeg" height= 100 alt="produto">
+    
+            <div class="card" id="card2">
+                <div class = "productInfos">
+                    <p>Nome do produto</p>
+                    <p>Preço</p>
+                    <p>Breve descrição</p>
+                </div>
+                <div>
+                    <img src="/projeto/publico/img/default_img.jpeg" height= 100 alt="produto">
+                </div>
             </div>
-        </div>
-
-        <div class="card" id="card2">
-            <div class = "productInfos">
-                <p>Nome do produto</p>
-                <p>Preço</p>
-                <p>Breve descrição</p>
+    
+            <div class="card" id="card3">
+                <div class = "productInfos">
+                    <p>Nome do produto</p>
+                    <p>Preço</p>
+                    <p>Breve descrição</p>
+                </div>
+                <div>
+                    <img src="/projeto/publico/img/default_img.jpeg" height= 100 alt="produto">
+                </div>
             </div>
-            <div>
-                <img src="/projeto/publico/img/default_img.jpeg" height= 100 alt="produto">
+    
+            <div class="card" id="card4">
+                <div class = "productInfos">
+                    <p>Nome do produto</p>
+                    <p>Preço</p>
+                    <p>Breve descrição</p>
+                </div>
+                <div>
+                    <img src="/projeto/publico/img/default_img.jpeg" height= 100 alt="produto">
+                </div>
             </div>
-        </div>
-
-        <div class="card" id="card3">
-            <div class = "productInfos">
-                <p>Nome do produto</p>
-                <p>Preço</p>
-                <p>Breve descrição</p>
+    
+            <div class="card" id="card5">
+                <div class = "productInfos">
+                    <p>Nome do produto</p>
+                    <p>Preço</p>
+                    <p>Breve descrição</p>
+                </div>
+                <div>
+                    <img src="/projeto/publico/img/default_img.jpeg" height= 100 alt="produto">
+                </div>
             </div>
-            <div>
-                <img src="/projeto/publico/img/default_img.jpeg" height= 100 alt="produto">
-            </div>
-        </div>
-
-        <div class="card" id="card4">
-            <div class = "productInfos">
-                <p>Nome do produto</p>
-                <p>Preço</p>
-                <p>Breve descrição</p>
-            </div>
-            <div>
-                <img src="/projeto/publico/img/default_img.jpeg" height= 100 alt="produto">
-            </div>
-        </div>
-
-        <div class="card" id="card5">
-            <div class = "productInfos">
-                <p>Nome do produto</p>
-                <p>Preço</p>
-                <p>Breve descrição</p>
-            </div>
-            <div>
-                <img src="/projeto/publico/img/default_img.jpeg" height= 100 alt="produto">
-            </div>
-        </div>
-
-        
-        <div class="card" id="card6">
-            <div class = "productInfos">
-                <p>Nome do produto</p>
-                <p>Preço</p>
-                <p>Breve descrição</p>
-            </div>
-            <div>
-                <img src="/projeto/publico/img/default_img.jpeg" height= 100 alt="produto">
+    
+            
+            <div class="card" id="card6">
+                <div class = "productInfos">
+                    <p>Nome do produto</p>
+                    <p>Preço</p>
+                    <p>Breve descrição</p>
+                </div>
+                <div>
+                    <img src="/projeto/publico/img/default_img.jpeg" height= 100 alt="produto">
+                </div>
             </div>
         </div>
 
@@ -155,10 +157,14 @@
                         checkAll.checked = false;
                 })
             }
-            let card1 = document.querySelector("#card1");
-            card1.addEventListener("click", function() {
-                window.open("anuncio.html","_self");
-            })
+            var cards = document.querySelectorAll('.card');
+
+            for (var i = 0; i < cards.length; i++) {
+                cards[i].addEventListener('click', function() {
+       
+        window.location.href = "anuncio.html";
+    });
+}
             
             
         </script>
