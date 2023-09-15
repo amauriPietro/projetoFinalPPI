@@ -1,0 +1,5 @@
+.anuncio{
+    padding-left: 20px;
+    display: flex;
+    flex: row;
+}

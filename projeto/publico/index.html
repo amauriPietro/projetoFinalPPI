@@ -194,7 +194,8 @@
                 let description = pArray[2].textContent;
 
                 console.log(product +"\t"+ price +"\t"+ description);
-                window.location.href = "anuncio.html";
+                var url = `anuncio.html?produto=${encodeURIComponent(product)}&preco=${encodeURIComponent(price)}&descricao=${encodeURIComponent(description)}`;
+                window.location.href = url;
               });
             })(i);
           }
