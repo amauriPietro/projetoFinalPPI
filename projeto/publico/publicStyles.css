@@ -1,0 +1,41 @@
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+header h1{
+    font-family: fantasy;
+    color: rgb(20, 113, 220);
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    margin: 5px 5px;
+    width: fit-content;
+}
+
+.productInfos{
+    margin-left: 5px;
+}
+
+.navBar {
+    list-style: none;
+    margin-right: 50px;
+} 
+
+.navBar li {
+    display: inline-block;
+    margin-left: 10px;
+} 
