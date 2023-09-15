@@ -1,177 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="publicStyles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="publicStyles.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <div>
-                <img src="/projeto/publico/img/logotipo.jpeg" height= 100 alt="produto">
-            </div>
-            <h1>
-                UFUMix
-            </h1>
+      <div class="logo">
+        <div>
+          <img
+            src="/projeto/publico/img/logotipo.jpeg"
+            height="100"
+            alt="produto"
+          />
         </div>
-        <nav>
-            <ul class="navBar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
-            </ul>
-        </nav>
-
+        <h1>UFUMix</h1>
+      </div>
+      <nav>
+        <ul class="navBar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <label for="busca">Buscar:</label>
-        <input type="text" name="busca" id="busca" placeholder="Nome do produto">
-        <button type="button">Ok</button>
-        <button type="button">avançado</button>
+      <label for="busca">Buscar:</label>
+      <input
+        type="text"
+        name="busca"
+        id="busca"
+        placeholder="Nome do produto"
+      />
+      <button type="button">Ok</button>
+      <button type="button">avançado</button>
 
-        <fieldset>
+      <fieldset>
+        <p>Buscar palavra-chave em:</p>
+        <input type="radio" name="tipoBusca" id="titulo" value="titulo" />
+        <label for="titulo">Título</label>
+        <input type="radio" name="tipoBusca" id="desc" value="desc" />
+        <label for="desc">Descrição</label>
 
-            <p>Buscar palavra-chave em:</p>
-            <input type="radio" name="tipoBusca" id="titulo" value="titulo">
-            <label for="titulo">Título</label>
-            <input type="radio" name="tipoBusca" id="desc" value="desc">
-            <label for="desc">Descrição</label>
+        <p>Preço:</p>
+        <label for="min">Min. R$</label>
+        <input type="number" name="min" id="min" placeholder="0" />
+        <label for="max">Max. R$</label>
+        <input type="number" name="max" id="max" placeholder="1000000" />
 
-            <p>Preço:</p>
-            <label for="min">Min. R$</label>
-            <input type="number" name="min" id="min" placeholder="0">
-            <label for="max">Max. R$</label>
-            <input type="number" name="max" id="max" placeholder="1000000">
+        <p>Categoria:</p>
+        <input type="checkbox" name="checkAll" id="checkAll" value="checkAll" />
+        <label for="checkAll">Todos</label>
+        <input type="checkbox" name="eletro" id="eletro" value="eletro" />
+        <label for="eletro">Eletrônicos</label>
+        <input type="checkbox" name="moveis" id="moveis" value="moveis" />
+        <label for="moveis">Móveis</label>
+        <input type="checkbox" name="roupas" id="roupas" value="roupas" />
+        <label for="roupas">Roupas</label>
+      </fieldset>
 
-            <p>Categoria:</p>
-            <input type="checkbox" name="checkAll" id="checkAll" value="checkAll">
-            <label for="checkAll">Todos</label>
-            <input type="checkbox" name="eletro" id="eletro" value="eletro">
-            <label for="eletro">Eletrônicos</label>
-            <input type="checkbox" name="moveis" id="moveis" value="moveis">
-            <label for="moveis">Móveis</label>
-            <input type="checkbox" name="roupas" id="roupas" value="roupas">
-            <label for="roupas">Roupas</label>
-        </fieldset>
-
-        <div class="resultsContainer">
-            <div class="card" id="card1">
-                <div class = "productInfos">
-                    <p>Nome do produto</p>
-                    <p>Preço</p>
-                    <p>Breve descrição</p>
-                </div>
-                <div>
-                    <img src="/projeto/publico/img/default_img.jpeg" height= 100 alt="produto">
-                </div>
-            </div>
-    
-            <div class="card" id="card2">
-                <div class = "productInfos">
-                    <p>Nome do produto</p>
-                    <p>Preço</p>
-                    <p>Breve descrição</p>
-                </div>
-                <div>
-                    <img src="/projeto/publico/img/default_img.jpeg" height= 100 alt="produto">
-                </div>
-            </div>
-    
-            <div class="card" id="card3">
-                <div class = "productInfos">
-                    <p>Nome do produto</p>
-                    <p>Preço</p>
-                    <p>Breve descrição</p>
-                </div>
-                <div>
-                    <img src="/projeto/publico/img/default_img.jpeg" height= 100 alt="produto">
-                </div>
-            </div>
-    
-            <div class="card" id="card4">
-                <div class = "productInfos">
-                    <p>Nome do produto</p>
-                    <p>Preço</p>
-                    <p>Breve descrição</p>
-                </div>
-                <div>
-                    <img src="/projeto/publico/img/default_img.jpeg" height= 100 alt="produto">
-                </div>
-            </div>
-    
-            <div class="card" id="card5">
-                <div class = "productInfos">
-                    <p>Nome do produto</p>
-                    <p>Preço</p>
-                    <p>Breve descrição</p>
-                </div>
-                <div>
-                    <img src="/projeto/publico/img/default_img.jpeg" height= 100 alt="produto">
-                </div>
-            </div>
-    
-            
-            <div class="card" id="card6">
-                <div class = "productInfos">
-                    <p>Nome do produto</p>
-                    <p>Preço</p>
-                    <p>Breve descrição</p>
-                </div>
-                <div>
-                    <img src="/projeto/publico/img/default_img.jpeg" height= 100 alt="produto">
-                </div>
-            </div>
+      <div class="resultsContainer">
+        <div class="card" id="card1">
+          <div class="productInfos">
+            <p>Bola de futebol Jabulani</p>
+            <p>R$ 200,00</p>
+            <p>Bola da Copa do Mundo FIFA de 2010</p>
+          </div>
+          <div>
+            <img
+              src="/projeto/publico/img/jabulani.jpeg"
+              height="100"
+              alt="produto"
+            />
+          </div>
         </div>
 
-        <script>
-            let checkAll = document.querySelector("#checkAll");
-            let categorias = [];
-            let flag = 0;
-            categorias.push(document.querySelector("#eletro"));
-            categorias.push(document.querySelector("#moveis"));
-            categorias.push(document.querySelector("#roupas"));
-            checkAll.addEventListener("click", function() {
-                if(checkAll.checked){
-                    for(let item of categorias)
-                        item.checked = true;
-                    flag = categorias.length;
-                }
-                else{
-                    for(let item of categorias)
-                        item.checked = false;
-                    flag = 0;
-                }
-            })
-            for(let item of categorias){
-                item.addEventListener("click", function() {
-                    if(item.checked)
-                        flag++;
-                    else
-                        flag--;
-                    if(flag === categorias.length)
-                        checkAll.checked = true;
-                    else
-                        checkAll.checked = false;
-                })
-            }
-            var cards = document.querySelectorAll('.card');
+        <div class="card" id="card2">
+          <div class="productInfos">
+            <p>Nome do produto</p>
+            <p>Preço</p>
+            <p>Breve descrição</p>
+          </div>
+          <div>
+            <img
+              src="/projeto/publico/img/default_img.jpeg"
+              height="100"
+              alt="produto"
+            />
+          </div>
+        </div>
 
-            for (var i = 0; i < cards.length; i++) {
-                cards[i].addEventListener('click', function() {
-       
-        window.location.href = "anuncio.html";
-    });
-}
-            
-            
-        </script>
+        <div class="card" id="card3">
+          <div class="productInfos">
+            <p>Nome do produto</p>
+            <p>Preço</p>
+            <p>Breve descrição</p>
+          </div>
+          <div>
+            <img
+              src="/projeto/publico/img/default_img.jpeg"
+              height="100"
+              alt="produto"
+            />
+          </div>
+        </div>
 
+        <div class="card" id="card4">
+          <div class="productInfos">
+            <p>Nome do produto</p>
+            <p>Preço</p>
+            <p>Breve descrição</p>
+          </div>
+          <div>
+            <img
+              src="/projeto/publico/img/default_img.jpeg"
+              height="100"
+              alt="produto"
+            />
+          </div>
+        </div>
+
+        <div class="card" id="card5">
+          <div class="productInfos">
+            <p>Nome do produto</p>
+            <p>Preço</p>
+            <p>Breve descrição</p>
+          </div>
+          <div>
+            <img
+              src="/projeto/publico/img/default_img.jpeg"
+              height="100"
+              alt="produto"
+            />
+          </div>
+        </div>
+
+        <div class="card" id="card6">
+          <div class="productInfos">
+            <p>Nome do produto</p>
+            <p>Preço</p>
+            <p>Breve descrição</p>
+          </div>
+          <div>
+            <img
+              src="/projeto/publico/img/default_img.jpeg"
+              height="100"
+              alt="produto"
+            />
+          </div>
+        </div>
+      </div>
+
+      <script>
+        let checkAll = document.querySelector("#checkAll");
+        let categorias = [];
+        let flag = 0;
+        categorias.push(document.querySelector("#eletro"));
+        categorias.push(document.querySelector("#moveis"));
+        categorias.push(document.querySelector("#roupas"));
+        checkAll.addEventListener("click", function () {
+          if (checkAll.checked) {
+            for (let item of categorias) item.checked = true;
+            flag = categorias.length;
+          } else {
+            for (let item of categorias) item.checked = false;
+            flag = 0;
+          }
+        });
+        for (let item of categorias) {
+          item.addEventListener("click", function () {
+            if (item.checked) flag++;
+            else flag--;
+            if (flag === categorias.length) checkAll.checked = true;
+            else checkAll.checked = false;
+          });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+          var cards = document.querySelectorAll(".card");
+
+          for (var i = 0; i < cards.length; i++) {
+            (function (index) {
+              cards[index].addEventListener("click", function () {
+                var card = cards[index];
+                var pElements = card.querySelectorAll(".productInfos p");
+                var pArray = Array.from(pElements);
+
+                let product = pArray[0].textContent;
+                let price = pArray[1].textContent;
+                let description = pArray[2].textContent;
+
+                console.log(product +"\t"+ price +"\t"+ description);
+                window.location.href = "anuncio.html";
+              });
+            })(i);
+          }
+        });
+      </script>
     </main>
-    <footer>
-
-    </footer>
-</body>
+    <footer></footer>
+  </body>
 </html>

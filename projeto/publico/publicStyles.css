@@ -48,6 +48,10 @@ header h1{
     margin-left: 5px;
 }
 
+.productInfos>:first-child{
+    font-weight: bold;
+}
+
 .navBar {
     list-style: none;
     margin-right: 50px;
