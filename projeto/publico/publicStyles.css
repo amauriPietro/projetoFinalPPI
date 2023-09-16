@@ -4,8 +4,7 @@ header{
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid black;
-    margin-bottom: 10px;
-    background-color: #FFD580;
+    background-color: rgb(255, 215, 0,0.4);
 }
 
 header h1{
@@ -31,8 +30,8 @@ body{
     justify-content: space-between;
     border: 1px solid black;
     margin: 5px 5px;
-    width: 32.7%;
-    transition: .5s;
+    width: 32.67%;
+    transition: .3s;
 }
 
 .resultsContainer{
@@ -47,7 +46,7 @@ body{
 
 .card:hover{
     cursor: pointer;
-    background-color: #ccc;
+    background-color: rgb(255, 215, 0,0.4);
 }
 
 .productInfos{
@@ -104,4 +103,11 @@ fieldset{
 
 main{
     margin: 30px;
+}
+
+.announceHeader{
+    text-align: center;
+    background-color: rgb(140, 140, 194);
+    color: yellow;
+    font-weight: bold;
 }

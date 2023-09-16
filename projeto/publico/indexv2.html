@@ -3,53 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="publicStyles.css">
+    <link rel="stylesheet" href="loginStyles.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <h1>
-            UFUMix
-        </h1>
+        <div class="logo">
+            <div>
+                <img src="img/logotipo.png" height= 100 alt="produto">
+            </div>
+            <h1>
+                UFUMix
+            </h1>
+        </div>
+        <nav>
+            <ul class="navBar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
-        </ul>
-    </nav>
     <main>
-        <label for="busca">Buscar:</label>
-        <input type="text" name="busca" id="busca" placeholder="Nome do produto">
-        <button type="button">Ok</button>
-        <button type="button">avançado</button>
-
-        <fieldset>
-
-            <p>Buscar palavra-chave em:</p>
-            <input type="radio" name="tipoBusca" id="titulo" value="titulo">
-            <label for="titulo">Título</label>
-            <input type="radio" name="tipoBusca" id="desc" value="desc">
-            <label for="desc">Descrição</label>
-
-            <p>Preço:</p>
-            <label for="min">Min.</label>
-            <input type="number" name="min" id="min">
-            <label for="max">Max.</label>
-            <input type="number" name="max" id="max">
-
-            <p>Categoria:</p>
-            <input type="checkbox" name="checkAll" id="checkAll">
-            <label for="checkAll">Todos</label>
-            <input type="checkbox" name="eletro" id="eletro">
-            <label for="eletro">Eletrônicos</label>
-            <input type="checkbox" name="moveis" id="moveis">
-            <label for="moveis">Móveis</label>
-        </fieldset>
-
+        <div class="mid-page-div">
+            <div id="logo-login">
+                <img src="img/logotipo.jpeg" height="100" alt="UFUMix">
+                <h2>Login</h2>
+            </div>
+            
+            <fieldset>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha">
+                <button type="submit">Entrar</button>
+            </fieldset>
+            <div>
+                <a href="cadastro.html">Cadastrar-se</a>
+            </div>
+            <div>
+                <a href="">Esqueci minha senha</a>    
+            </div>
+        </div>
+        
     </main>
     <footer>
-
+        
     </footer>
 </body>
 </html>
