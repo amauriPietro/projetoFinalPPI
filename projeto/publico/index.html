@@ -11,7 +11,7 @@
       <div class="logo">
         <div>
           <img
-            src="/projeto/publico/img/logotipo.jpeg"
+            src="img/logotipo.png"
             height="100"
             alt="produto"
           />
@@ -36,9 +36,9 @@
         placeholder="Nome do produto"
       />
       <button type="button">Ok</button>
-      <button type="button">avançado</button>
+      <button type="button" id="collapseBtn">Filtros</button>
 
-      <fieldset>
+      <fieldset id="collapse-content">
         <p>Buscar palavra-chave em:</p>
         <input type="radio" name="tipoBusca" id="titulo" value="titulo" />
         <label for="titulo">Título</label>
@@ -71,7 +71,7 @@
           </div>
           <div>
             <img
-              src="/projeto/publico/img/jabulani.jpeg"
+              src="img/jabulani.jpeg"
               height="100"
               alt="produto"
             />
@@ -86,7 +86,7 @@
           </div>
           <div>
             <img
-              src="/projeto/publico/img/default_img.jpeg"
+              src="img/default_img.jpeg"
               height="100"
               alt="produto"
             />
@@ -101,7 +101,7 @@
           </div>
           <div>
             <img
-              src="/projeto/publico/img/default_img.jpeg"
+              src="img/default_img.jpeg"
               height="100"
               alt="produto"
             />
@@ -116,7 +116,7 @@
           </div>
           <div>
             <img
-              src="/projeto/publico/img/default_img.jpeg"
+              src="img/default_img.jpeg"
               height="100"
               alt="produto"
             />
@@ -131,7 +131,7 @@
           </div>
           <div>
             <img
-              src="/projeto/publico/img/default_img.jpeg"
+              src="img/default_img.jpeg"
               height="100"
               alt="produto"
             />
@@ -146,7 +146,7 @@
           </div>
           <div>
             <img
-              src="/projeto/publico/img/default_img.jpeg"
+              src="img/default_img.jpeg"
               height="100"
               alt="produto"
             />
@@ -200,6 +200,17 @@
             })(i);
           }
         });
+
+        var collapseBtn = document.querySelector("#collapseBtn");
+
+        collapseBtn.addEventListener("click", function(){
+            var content = document.querySelector("#collapse-content");
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+    }
+        })
       </script>
     </main>
     <footer></footer>

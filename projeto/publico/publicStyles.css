@@ -95,3 +95,13 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="password
 fieldset{
     border: none;
 }
+
+#collapse-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+main{
+    margin: 30px;
+}
