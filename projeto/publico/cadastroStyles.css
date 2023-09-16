@@ -1,0 +1,13 @@
+#logo-cad{
+    text-align: center;
+}
+
+button{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
