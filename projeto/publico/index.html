@@ -187,6 +187,7 @@
               cards[index].addEventListener("click", function () {
                 var card = cards[index];
                 var pElements = card.querySelectorAll(".productInfos p");
+                var productImage = card.querySelector("img");
                 var pArray = Array.from(pElements);
 
                 let product = pArray[0].textContent;
@@ -194,7 +195,7 @@
                 let description = pArray[2].textContent;
 
                 console.log(product +"\t"+ price +"\t"+ description);
-                var url = `anuncio.html?produto=${encodeURIComponent(product)}&preco=${encodeURIComponent(price)}&descricao=${encodeURIComponent(description)}`;
+                var url = `anuncio.html?produto=${encodeURIComponent(product)}&preco=${encodeURIComponent(price)}&descricao=${encodeURIComponent(description)}&imgUrl=${encodeURIComponent(productImage.src)}`;
                 window.location.href = url;
               });
             })(i);
