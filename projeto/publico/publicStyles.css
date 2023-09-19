@@ -89,6 +89,32 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="password
     .mid-page-div{
         width: 80%;
     }
+
+}
+
+@media (max-width: 1800px) {
+
+    .card{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 5px 5px;
+        width: 48%;
+        transition: .3s;
+    }
+}
+
+
+@media (max-width: 670px) {
+
+    .card{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 5px 5px;
+        width: 98%;
+        transition: .3s;
+    }
 }
 
 fieldset{
