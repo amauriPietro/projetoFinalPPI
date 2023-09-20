@@ -4,12 +4,11 @@ header{
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid black;
-    background-color: rgb(255, 215, 0,0.4);
+    background-color: #024959;
 }
 
 header h1{
-    font-family: fantasy;
-    color: rgb(20, 113, 220);
+    color: #F2c12e;
 }
 
 body{
@@ -29,6 +28,7 @@ body{
     align-items: center;
     justify-content: space-between;
     border: 1px solid black;
+    border-radius: 5px;
     margin: 5px 5px;
     width: 32.67%;
     transition: .3s;
@@ -58,35 +58,36 @@ body{
     font-weight: bold;
 }
 
-/* Estilos gerais para a navbar */
 .navbar {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    background-color: transparent; /* Fundo transparente */
+    background-color: transparent; 
     justify-content: center;
 }
 
-/* Estilos para cada item da navbar */
 .navbar li {
     margin: 0 2px;
-}
-
-/* Estilos para os links */
-.navbar a {
-    text-decoration: none;
-    color: #007BFF; /* Cor do texto */
-    font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s;
-    background-color: transparent; /* Fundo transparente */
+    display: flex;
 }
 
-/* Estilos quando o mouse passa por cima do link */
-.navbar a:hover {
-    background-color: rgba(0, 123, 255, 0.2); /* Cor de fundo com transparência */
+.navbar a {
+    text-decoration: none;
+    color: white; 
+    font-weight: bold;
+    background-color: transparent;
+    margin: 0px 10px;
+    transition: .4s;
+}
+
+.navbar a:hover{
+color: gold;
+}
+
+.navbar li:hover {
+    background-color: rgba(0, 123, 255, 0.2); 
 }
 
 
@@ -153,7 +154,7 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="password
         margin: 0;
         display: flex;
         flex-direction: column;
-        background-color: transparent; /* Fundo transparente */
+        background-color: transparent;
         justify-content: center;
     }
 }
@@ -184,3 +185,11 @@ main{
     font-weight: bold;
 }
 
+#search-buttons{
+    display: flex;
+
+}
+
+#search-buttons button{
+    margin: 0px 5px;
+}
