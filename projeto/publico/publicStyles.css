@@ -59,7 +59,7 @@ body{
 }
 
 /* Estilos gerais para a navbar */
-.navBar {
+.navbar {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -69,12 +69,12 @@ body{
 }
 
 /* Estilos para cada item da navbar */
-.navBar li {
+.navbar li {
     margin: 0 2px;
 }
 
 /* Estilos para os links */
-.navBar a {
+.navbar a {
     text-decoration: none;
     color: #007BFF; /* Cor do texto */
     font-weight: bold;
@@ -85,7 +85,7 @@ body{
 }
 
 /* Estilos quando o mouse passa por cima do link */
-.navBar a:hover {
+.navbar a:hover {
     background-color: rgba(0, 123, 255, 0.2); /* Cor de fundo com transparência */
 }
 
@@ -147,7 +147,7 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="password
 @media (max-width: 480px) {
 
 
-    .navBar {
+    .navbar {
         list-style: none;
         padding: 0;
         margin: 0;
