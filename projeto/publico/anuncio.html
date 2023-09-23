@@ -22,22 +22,22 @@
           <li><img src="img/signup.png" alt="" height="20"><a href="cadastro.html">Cadastro</a></li>
         </ul>
       </nav>
+      
     </header>
     <div class="announceHeader">
       ESPORTE
     </div>
     <main >
       <div class="anuncio">
+        <div id="title" >
+          <h3></h3>
+        </div>
         <img
           src="img/default_img.jpeg"
           alt="produto"
-          width="400"
         >
 
         <div class="infos">
-          <div id="title" >
-            <h3></h3>
-          </div>
           <div class="anuncioCampo" id = "descriptionField">
             <h4>Descrição:</h4>
             <p></p>
@@ -50,31 +50,30 @@
           <button>COMPRAR</button>
         </div>
       </div>
-
-      <script>
-        var queryString = window.location.search;
-        var urlParams = new URLSearchParams(queryString);
-
-
-        var produto = urlParams.get("produto");
-        var preco = urlParams.get("preco");
-        var descricao = urlParams.get("descricao");
-        var imagem = urlParams.get("imgUrl");
-
-        var imageElement = document.querySelector(".anuncio img");
-        var description = document.getElementById("descriptionField")
-        var price = document.getElementById("priceField")
-        var title = document.getElementById("title")
-
-        description.querySelector('p').textContent = descricao;
-        price.querySelector('p').textContent = preco;
-        title.querySelector('h3').textContent = produto;
-        imageElement.src = imagem;
-
-    
-      </script>
     </main>
 
     <footer></footer>
+    <script>
+      var queryString = window.location.search;
+      var urlParams = new URLSearchParams(queryString);
+
+
+      var produto = urlParams.get("produto");
+      var preco = urlParams.get("preco");
+      var descricao = urlParams.get("descricao");
+      var imagem = urlParams.get("imgUrl");
+
+      var imageElement = document.querySelector(".anuncio img");
+      var description = document.getElementById("descriptionField")
+      var price = document.getElementById("priceField")
+      var title = document.getElementById("title")
+
+      description.querySelector('p').textContent = descricao;
+      price.querySelector('p').textContent = preco;
+      title.querySelector('h3').textContent = produto;
+      imageElement.src = imagem;
+
+  
+    </script>
   </body>
 </html>
