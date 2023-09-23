@@ -32,27 +32,61 @@
                 <img src="img/logotipo.png" height="100" alt="UFUMix">
                 <h2>Crie sua conta</h2>
             </div>
-            <form action="index.html" method="post"></form>
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome">
-                <label for="CPF">CPF:</label>
-                <input type="text" name="CPF" id="CPF">
-                <label for="email">E-mail:</label>
-                <input type="email" name="email" id="email">
-                <label for="senha">Senha:</label>
-                <input type="password" name="senha" id="senha">
-                <label for="senhaRep">Repita sua senha:</label>
-                <input type="password" name="senhaRep" id="senhaRep">
-                <label for="telefone">Telefone:</label>
-                <input type="tel" name="telefone" id="telefone">
-                <button type="submit">Cadastrar!</button>
+            <form name="cadastro" action="/cadastra.php" method="get"></form>
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome">
+                    <span></span>
+                </div>
+                <div>
+                    <label for="CPF">CPF:</label>
+                    <input type="text" name="CPF" id="CPF">
+                    <span></span>
+                </div>
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email">
+                    <span></span>
+                </div>
+                <div>
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha">
+                    <span></span>
+                </div>
+                <div>
+                    <label for="senhaRep">Repita sua senha:</label>
+                    <input type="password" name="senhaRep" id="senhaRep">
+                    <span></span>
+                </div>
+                <div>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" name="telefone" id="telefone">
+                    <span></span>
+                </div>
+                <button>Cadastrar-se</button>
             </form>
             <a href="login.html">Já possuo uma conta</a>
         </div>
         
     </main>
-    <footer>
-        
-    </footer>
+    <script>
+        document.forms.cadastro.onsubmit = validaForm
+        function validaForm(e){
+            console.log(":)")
+            let form = e.target
+            let valido = true
+            for(let formField of form)
+                formField.nextElementSibling.textContent = ""
+            for(let formField of form){
+                if(formField.value === ""){
+                    let spanVerify = formField.nextElementSibling
+                    spanVerify.textContent = "O campo deve ser preenchido"
+                    valido = false
+                }
+            }
+            if(!valido)
+                e.preventDefault();
+        }
+    </script>
 </body>
 </html>
