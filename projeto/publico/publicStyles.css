@@ -214,3 +214,8 @@ main{
 #search-buttons button{
     margin: 0px 5px;
 }
+
+.price{
+    color: green;
+    font-weight: bold
+}
