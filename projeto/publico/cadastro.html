@@ -32,7 +32,7 @@
                 <img src="img/logotipo.png" height="100" alt="UFUMix">
                 <h2>Crie sua conta</h2>
             </div>
-            <form name="cadastro" action="/cadastra.php" method="get"></form>
+            <form name="cadastro" method="get">
                 <div>
                     <label for="nome">Nome:</label>
                     <input type="text" name="nome" id="nome">
@@ -70,14 +70,14 @@
         
     </main>
     <script>
+        let inputs = document.querySelectorAll("input")
         document.forms.cadastro.onsubmit = validaForm
         function validaForm(e){
-            console.log(":)")
             let form = e.target
             let valido = true
-            for(let formField of form)
+            for(let formField of inputs)
                 formField.nextElementSibling.textContent = ""
-            for(let formField of form){
+            for(let formField of inputs){
                 if(formField.value === ""){
                     let spanVerify = formField.nextElementSibling
                     spanVerify.textContent = "O campo deve ser preenchido"
