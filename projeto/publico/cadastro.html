@@ -18,12 +18,12 @@
             </h1>
         </div>
         <nav>
-            <ul class="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
+            <ul class="navbar ">
+              <li><img src="img/home.png" alt="" height="20"><a href="index.html">Home</a></li>
+              <li><img src="img/login.png" alt="" height="20"><a href="login.html">Login</a></li>
+              <li><img src="img/signup.png" alt="" height="20"><a href="cadastro.html">Cadastro</a></li>
             </ul>
-        </nav>
+          </nav>
 
     </header>
     <main>
@@ -32,19 +32,21 @@
                 <img src="img/logotipo.png" height="100" alt="UFUMix">
                 <h2>Crie sua conta</h2>
             </div>
-            <fieldset>
+            <form action="index.html" method="post"></form>
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome">
                 <label for="CPF">CPF:</label>
                 <input type="text" name="CPF" id="CPF">
                 <label for="email">E-mail:</label>
                 <input type="email" name="email" id="email">
-                <label for="senha">Senha</label>
+                <label for="senha">Senha:</label>
                 <input type="password" name="senha" id="senha">
+                <label for="senhaRep">Repita sua senha:</label>
+                <input type="password" name="senhaRep" id="senhaRep">
                 <label for="telefone">Telefone:</label>
                 <input type="tel" name="telefone" id="telefone">
                 <button type="submit">Cadastrar!</button>
-            </fieldset>
+            </form>
             <a href="login.html">Já possuo uma conta</a>
         </div>
         

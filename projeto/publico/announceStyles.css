@@ -9,11 +9,14 @@
     flex: row;
     align-items: center;
     justify-content:  space-between;
-    width: 40%;
+    width: 80%;
     border: 3px solid gold;
     margin: 0 auto;
 }
 
+.anuncio img{
+    width: 30vw;
+}
 
 #title{
     color: blue;
