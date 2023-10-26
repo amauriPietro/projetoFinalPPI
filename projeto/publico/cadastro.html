@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="publicStyles.css">
-    <link rel="stylesheet" href="cadastroStyles.css">
+    <link rel="stylesheet" href="styles/publicStyles.css">
+    <link rel="stylesheet" href="styles/cadastroStyles.css">
     <title>UFUMix</title>
     <link rel="icon" href="img/logotipo.png">
 </head>
@@ -70,24 +70,6 @@
         </div>
         
     </main>
-    <script>
-        let inputs = document.querySelectorAll("input")
-        document.forms.cadastro.onsubmit = validaForm
-        function validaForm(e){
-            let form = e.target
-            let valido = true
-            for(let formField of inputs)
-                formField.nextElementSibling.textContent = ""
-            for(let formField of inputs){
-                if(formField.value === ""){
-                    let spanVerify = formField.nextElementSibling
-                    spanVerify.textContent = "O campo deve ser preenchido"
-                    valido = false
-                }
-            }
-            if(!valido)
-                e.preventDefault();
-        }
-    </script>
+    <script src="scripts/cadastro_src.js"></script>
 </body>
 </html>

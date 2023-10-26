@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="publicStyles.css" />
-    <link rel="stylesheet" href="announceStyles.css" />
+    <link rel="stylesheet" href="styles/publicStyles.css" />
+    <link rel="stylesheet" href="styles/announceStyles.css" />
     <title>UFUMix</title>
     <link rel="icon" href="img/logotipo.png">
   </head>
@@ -54,27 +54,6 @@
     </main>
 
     <footer></footer>
-    <script>
-      var queryString = window.location.search;
-      var urlParams = new URLSearchParams(queryString);
-
-
-      var produto = urlParams.get("produto");
-      var preco = urlParams.get("preco");
-      var descricao = urlParams.get("descricao");
-      var imagem = urlParams.get("imgUrl");
-
-      var imageElement = document.querySelector(".anuncio img");
-      var description = document.getElementById("descriptionField")
-      var price = document.getElementById("priceField")
-      var title = document.getElementById("title")
-
-      description.querySelector('p').textContent = descricao;
-      price.querySelector('p').textContent = preco;
-      title.querySelector('h3').textContent = produto;
-      imageElement.src = imagem;
-
-  
-    </script>
+    <script src="scripts/anuncio_src.js"></script>
   </body>
 </html>
