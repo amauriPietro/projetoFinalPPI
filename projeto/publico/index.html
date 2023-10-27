@@ -62,24 +62,25 @@
           <label for="roupas">Roupas</label>
         </fieldset>
       </div>
-      <section>
-        <template id="template">
-          <div class="card">
-            <div class="productInfos">
-              <p>{{prod-name}}</p>
-              <p class="price">{{prod-price}}</p>
-              <p>{{prod-desc}}</p>
-            </div>
-            <div>
-              <img src="img/{{prod-image}}" height="100" alt="produto" />
-            </div>
-          </div>
-        </template>
-      </section>
     </div>
 
     <div class="announceHeader">
       ANUNCIOS
+    </div>
+
+    <div id="resultsContainer">
+      <template id="template">
+        <div class="card">
+          <div class="productInfos">
+            <p>{{prod-name}}</p>
+            <p class="price">{{prod-price}}</p>
+            <p>{{prod-desc}}</p>
+          </div>
+          <div>
+            <img src="img/{{prod-image}}" height="100" alt="produto" />
+          </div>
+        </div>
+      </template>
     </div>
 
     <script src="scripts/index_src.js"></script>

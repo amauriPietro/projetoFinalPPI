@@ -1,6 +1,7 @@
 let checkAll = document.querySelector("#checkAll");
 let categorias = [];
 let flag = 0;
+let offset = 0;
 categorias.push(document.querySelector("#eletro"));
 categorias.push(document.querySelector("#moveis"));
 categorias.push(document.querySelector("#roupas"));
@@ -57,3 +58,47 @@ collapseBtn.addEventListener("click", function () {
     content.style.borderStyle = "solid";
   }
 })
+
+function renderProducts(newProducts) {
+
+  const prodsSection = document.getElementById("resultsContainer");
+  const template = document.getElementById("template");
+  console.log(newProducts)
+  for (let product of newProducts) {
+    if(product.NomeArqFoto == null)
+      product.NomeArqFoto = "default_img.jpeg"
+    let html = template.innerHTML
+      .replace("{{prod-image}}", product.NomeArqFoto)
+      .replace("{{prod-name}}", product.Titulo)
+      .replace("{{prod-price}}", product.Preco)
+      .replace("{{prod-desc}}", product.Descricao);
+    prodsSection.insertAdjacentHTML("beforeend", html);
+  };
+}
+
+async function loadProducts() {
+
+  try {
+    let response = await fetch("http://ufumix.infinityfreeapp.com/publico/scripts/more-products.php?offset=" + offset);
+    if (!response.ok) throw new Error(response.statusText);
+    var products = await response.json();
+    offset += 6;
+  }
+  catch (e) {
+    console.error(e);
+    return;
+  }
+
+  renderProducts(products);
+}
+
+window.onload = function () {
+  console.log(":)")
+  loadProducts();
+}
+
+window.onscroll = function () {
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+    loadProducts();
+  }
+};
