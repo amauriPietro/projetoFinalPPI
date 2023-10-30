@@ -2,6 +2,11 @@ let checkAll = document.querySelector("#checkAll");
 let categorias = [];
 let flag = 0;
 let offset = 0;
+
+var loading = false; // Bandeira para evitar múltiplas solicitações de carregamento
+var page = 1; // Página inicial
+var productsPerPage = 6; // Número de produtos por página
+
 categorias.push(document.querySelector("#eletro"));
 categorias.push(document.querySelector("#moveis"));
 categorias.push(document.querySelector("#roupas"));
@@ -79,7 +84,7 @@ function renderProducts(newProducts) {
 async function loadProducts() {
 
   try {
-    let response = await fetch("http://ufumix.infinityfreeapp.com/publico/scripts/more-products.php?offset=" + offset);
+    var response = await fetch("https://ufumix.infinityfreeapp.com/publico/scripts/more-products.php?offset=" + offset);
     if (!response.ok) throw new Error(response.statusText);
     var products = await response.json();
     offset += 6;
@@ -98,7 +103,10 @@ window.onload = function () {
 }
 
 window.onscroll = function () {
-  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+  if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 200) {
     loadProducts();
   }
+  setTimeout(function () {
+    scrolling = false;
+  }, 200);
 };

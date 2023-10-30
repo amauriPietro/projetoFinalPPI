@@ -34,7 +34,7 @@ body{
     transition: .3s;
 }
 
-.resultsContainer{
+#resultsContainer{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

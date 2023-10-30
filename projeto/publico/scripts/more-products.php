@@ -3,7 +3,6 @@
 require 'connection-db.php';
 
 $offset = $_GET['offset'];
-$pdo = mysqlConnect();
 
 $sql = <<<SQL
     SELECT A.Codigo, A.Titulo AS Titulo, A.Descricao, A.Preco AS Preco, 
@@ -12,12 +11,13 @@ $sql = <<<SQL
     LIMIT 6 OFFSET ?
 SQL;
 try{
+    $pdo = mysqlConnect();
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$offset]);
     $produtos = $stmt->fetchAll(PDO::FETCH_OBJ);
+    unset($pdo);
     header('Content-Type: application/json; charset=utf-8');
     echo json_encode($produtos);
-
     //$products = array();
     //while()
 
