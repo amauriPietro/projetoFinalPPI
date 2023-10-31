@@ -1,75 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/publicStyles.css">
-    <link rel="stylesheet" href="styles/cadastroStyles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/publicStyles.css" />
+    <link rel="stylesheet" href="styles/cadastroStyles.css" />
     <title>UFUMix</title>
-    <link rel="icon" href="img/logotipo.png">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <div>
-                <img src="img/logotipo.png" height= 100 alt="produto">
-            </div>
-            <h1>
-                UFUMix
-            </h1>
-        </div>
-        <nav>
-            <ul class="navbar ">
-              <li><img src="img/home.png" alt="" height="20"><a href="index.html">Home</a></li>
-              <li><img src="img/login.png" alt="" height="20"><a href="login.html">Login</a></li>
-              <li><img src="img/signup.png" alt="" height="20"><a href="cadastro.html">Cadastro</a></li>
-            </ul>
-          </nav>
+    <link rel="icon" href="img/logotipo.png" />
 
+    <style>
+      #signUpFailMsg {
+        display: none;
+        color: red;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <div>
+          <img src="img/logotipo.png" height="100" alt="produto" />
+        </div>
+        <h1>UFUMix</h1>
+      </div>
+      <nav>
+        <ul class="navbar">
+          <li>
+            <img src="img/home.png" alt="" height="20" /><a href="index.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <img src="img/login.png" alt="" height="20" /><a href="login.html"
+              >Login</a
+            >
+          </li>
+          <li>
+            <img src="img/signup.png" alt="" height="20" /><a
+              href="cadastro.html"
+              >Cadastro</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <div class="mid-page-div">
-            <div id="logo-cad">
-                <img src="img/logotipo.png" height="100" alt="UFUMix">
-                <h2>Crie sua conta</h2>
-            </div>
-            <form name="cadastro" method="get">
-                <div>
-                    <label for="nome">Nome:</label>
-                    <input type="text" name="nome" id="nome">
-                    <span></span>
-                </div>
-                <div>
-                    <label for="CPF">CPF:</label>
-                    <input type="text" name="CPF" id="CPF">
-                    <span></span>
-                </div>
-                <div>
-                    <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email">
-                    <span></span>
-                </div>
-                <div>
-                    <label for="senha">Senha:</label>
-                    <input type="password" name="senha" id="senha">
-                    <span></span>
-                </div>
-                <div>
-                    <label for="senhaRep">Repita sua senha:</label>
-                    <input type="password" name="senhaRep" id="senhaRep">
-                    <span></span>
-                </div>
-                <div>
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" name="telefone" id="telefone">
-                    <span></span>
-                </div>
-                <button>Cadastrar-se</button>
-            </form>
-            <a href="login.html">Já possuo uma conta</a>
+      <div class="mid-page-div">
+        <div id="logo-cad">
+          <img src="img/logotipo.png" height="100" alt="UFUMix" />
+          <h2>Crie sua conta</h2>
         </div>
-        
+        <form name="formLogin">
+          <div>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" />
+            <span></span>
+          </div>
+          <div>
+            <label for="CPF">CPF:</label>
+            <input type="text" name="CPF" id="CPF" />
+            <span></span>
+          </div>
+          <div>
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" />
+            <span></span>
+          </div>
+          <div>
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha" />
+            <span></span>
+          </div>
+          <div>
+            <label for="senhaRep">Repita sua senha:</label>
+            <input type="password" name="senhaRep" id="senhaRep" />
+            <span></span>
+          </div>
+          <div>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" name="telefone" id="telefone" />
+            <span></span>
+          </div>
+          <button onclick="handleSignUp(event)">Cadastrar-se</button>
+
+          <div>
+            <p id="signUpFailMsg">
+              Dados incorretos. Por favor, tente novamente.
+            </p>
+          </div>
+        </form>
+        <a href="login.html">Já possuo uma conta</a>
+      </div>
     </main>
+
     <script src="scripts/cadastro_src.js"></script>
-</body>
+  </body>
 </html>

@@ -1,57 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/publicStyles.css">
-    <link rel="stylesheet" href="styles/loginStyles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/publicStyles.css" />
+    <link rel="stylesheet" href="styles/loginStyles.css" />
     <title>UFUMix</title>
-    <link rel="icon" href="img/logotipo.png">
-</head>
-<body>
+    <link rel="icon" href="img/logotipo.png" />
+    <style>
+      #loginFailMsg {
+        display: none;
+        color: red;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <div>
-                <img src="img/logotipo.png" height= 100 alt="produto">
-            </div>
-            <h1>
-                UFUMix
-            </h1>
+      <div class="logo">
+        <div>
+          <img src="img/logotipo.png" height="100" alt="produto" />
         </div>
-        <nav>
-            <ul class="navbar ">
-              <li><img src="img/home.png" alt="" height="20"><a href="index.html">Home</a></li>
-              <li><img src="img/login.png" alt="" height="20"><a href="login.html">Login</a></li>
-              <li><img src="img/signup.png" alt="" height="20"><a href="cadastro.html">Cadastro</a></li>
-            </ul>
-          </nav>
-
+        <h1>UFUMix</h1>
+      </div>
+      <nav>
+        <ul class="navbar">
+          <li>
+            <img src="img/home.png" alt="" height="20" /><a href="index.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <img src="img/login.png" alt="" height="20" /><a href="login.html"
+              >Login</a
+            >
+          </li>
+          <li>
+            <img src="img/signup.png" alt="" height="20" /><a
+              href="cadastro.html"
+              >Cadastro</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <div class="mid-page-div">
-            <div id="logo-login">
-                <img src="img/logotipo.jpeg" height="100" alt="UFUMix">
-                <h2>Login</h2>
-            </div>
-            
-            <form>
-                <label for="email">E-mail</label>
-                <input type="email" name="email" id="email">
-                <label for="senha">Senha</label>
-                <input type="password" name="senha" id="senha">
-                <button type="submit">Entrar</button>
-            </form>
-            <div>
-                <a href="cadastro.html">Cadastrar-se</a>
-            </div>
-            <div>
-                <a href="">Esqueci minha senha</a>    
-            </div>
+      <div class="mid-page-div">
+        <div id="logo-login">
+          <img src="img/logotipo.jpeg" height="100" alt="UFUMix" />
+          <h2>Login</h2>
         </div>
-        
+
+        <form name="formLogin">
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email" />
+          <label for="senha">Senha</label>
+          <input type="password" name="senha" id="senha" />
+          <div>
+            <p id="loginFailMsg">
+              Dados incorretos. Por favor, tente novamente.
+            </p>
+          </div>
+          <button onclick="handleFormSubmit(event)">Entrar</button>
+        </form>
+        <div>
+          <a href="cadastro.html">Cadastrar-se</a>
+        </div>
+        <div>
+          <a href="">Esqueci minha senha</a>
+        </div>
+      </div>
     </main>
-    <footer>
-        
-    </footer>
-</body>
+    <footer></footer>
+
+    <script>
+      async function handleFormSubmit(event) {
+        event.preventDefault();
+        const form = document.forms.formLogin;
+        try {
+          const response = await fetch("/publico/scripts/login.php", {
+            method: "post",
+            body: new FormData(form),
+          });
+          if (!response.ok) throw new Error(response.statusText);
+          var bodyText = await response.text();
+          const result = JSON.parse(bodyText);
+
+          if (result.success){
+          window.location = result.detail;    
+          alert("LOGUEI COM SUCESSO")}
+          else {
+            document.querySelector("#loginFailMsg").style.display = "block";
+            form.senha.value = "";
+            form.senha.focus();
+          }
+        } catch (e) {
+          console.log(bodyText ?? "");
+          console.error(e);
+        }
+      }
+
+
+    </script>
+  </body>
 </html>

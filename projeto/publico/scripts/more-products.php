@@ -26,6 +26,4 @@ catch(Exception $e){
     exit('Unexpected error'. $e->getMessage());
 }
 
-
-
 ?>

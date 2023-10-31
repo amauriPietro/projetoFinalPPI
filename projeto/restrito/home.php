@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,24 +18,10 @@
       </div>
       <nav>
         <ul class="navbar">
-          <li>
-            <img src="img/home.png" alt="" height="20" /><a
-              href="/publico/index.html"
-              >Home</a
-            >
-          </li>
-          <li>
-            <img src="img/login.png" alt="" height="20" /><a
-              href="/publico/login.html"
-              >Login</a
-            >
-          </li>
-          <li>
-            <img src="img/signup.png" alt="" height="20" /><a
-              href="/publico/cadastro.html"
-              >Cadastro</a
-            >
-          </li>
+            <li>
+                <p style = "color: white;">Olá,<strong><?php echo $_SESSION['username']; ?></strong></p>
+            </li>
+
         </ul>
       </nav>
     </header>

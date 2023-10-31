@@ -3,7 +3,6 @@ let categorias = [];
 let flag = 0;
 let offset = 0;
 
-var loading = false; // Bandeira para evitar múltiplas solicitações de carregamento
 var page = 1; // Página inicial
 var productsPerPage = 6; // Número de produtos por página
 
@@ -106,7 +105,5 @@ window.onscroll = function () {
   if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 200) {
     loadProducts();
   }
-  setTimeout(function () {
-    scrolling = false;
-  }, 200);
+
 };
